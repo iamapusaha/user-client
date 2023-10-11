@@ -25,6 +25,9 @@ const Users = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('inside post response', data);
+                const newUser = [...users, data]
+                setUsers(newUser)
+                form.reset()
             })
 
     }
